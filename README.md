@@ -1,4 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QikTix UK – The Smarter Way to Ticket
+
+QikTix UK is a modern, full-stack event ticketing platform built with Next.js, React, Framer Motion, and Supabase. This platform provides a comprehensive solution for event organizers and attendees, with features like secure ticket purchasing, mobile e-tickets with QR codes, and real-time event management.
+
+## Features
+
+- **User Authentication**: Email/password and social login via Supabase Auth
+- **Event Management**: Create, edit, and publish events with customizable details
+- **Advanced Ticketing**: Multiple ticket types with dynamic pricing and availability
+- **Interactive Seat Maps**: Assigned seating using SVG or Canvas
+- **Secure Payments**: Integrated with PayPal for secure transactions
+- **Mobile E-Tickets**: QR code-based digital tickets for easy event entry
+- **Ticket Transfers**: Transfer tickets between users seamlessly
+- **Real-time Notifications**: Updates for event changes or ticket transfers
+- **Event Discovery**: Search events by date, location, category, and more
+- **Analytics Dashboard**: Track ticket sales and revenue for organizers
+- **GDPR Compliance**: Secure and privacy-focused design
+
+## Tech Stack
+
+- **Frontend**: React.js with Next.js and Framer Motion for animations
+- **Backend**: Supabase (PostgreSQL database + authentication)
+- **Styling**: Tailwind CSS for responsive design
+- **Payments**: PayPal integration
+- **Deployment**: Vercel
 
 ## Getting Started
 

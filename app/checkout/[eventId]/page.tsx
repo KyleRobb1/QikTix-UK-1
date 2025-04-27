@@ -1,4 +1,4 @@
-export default function Page({ params }: { params: { eventId: string } }) {
+export default function CheckoutPage({ params }: { params: { eventId: string } }) {
   return (
     <div>
       <h1>Checkout for Event {params.eventId}</h1>

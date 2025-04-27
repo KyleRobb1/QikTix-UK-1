@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { useAuth } from '../../context/AuthContext';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -142,11 +143,11 @@ export default function SignupForm() {
           />
           <label htmlFor="terms" className="ml-2 block text-sm text-gray-700">
             I agree to the{' '}
-            <a href="/terms" className="text-blue-600 hover:text-blue-500">
+            <Link href="/terms" className="text-blue-600 hover:text-blue-500">Terms of Service</Link>
               Terms of Service
             </a>{' '}
             and{' '}
-            <a href="/privacy" className="text-blue-600 hover:text-blue-500">
+            <Link href="/privacy" className="text-blue-600 hover:text-blue-500">Privacy Policy</Link>
               Privacy Policy
             </a>
           </label>

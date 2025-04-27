@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { useAuth } from '../../context/AuthContext';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -114,7 +115,7 @@ export default function LoginForm() {
           </div>
 
           <div className="text-sm">
-            <a href="/forgot-password" className="font-medium text-blue-600 hover:text-blue-500">
+            <Link href="/forgot-password" className="font-medium text-blue-600 hover:text-blue-500">Forgot your password?</Link>
               Forgot your password?
             </a>
           </div>

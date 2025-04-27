@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiPlus, FiMinus, FiShoppingCart } from 'react-icons/fi';
 import { useRouter } from 'next/navigation';
@@ -161,11 +162,11 @@ export default function TicketSelection({ ticketTypes, eventId }: TicketSelectio
 
       <div className="mt-4 text-xs text-gray-500 text-center">
         By purchasing tickets, you agree to our{' '}
-        <a href="/terms" className="text-blue-600 hover:underline">
+        <Link href="/terms" className="text-blue-600 hover:underline">Terms of Service</Link>
           Terms of Service
         </a>{' '}
         and{' '}
-        <a href="/privacy" className="text-blue-600 hover:underline">
+        <Link href="/privacy" className="text-blue-600 hover:underline">Privacy Policy</Link>
           Privacy Policy
         </a>
       </div>

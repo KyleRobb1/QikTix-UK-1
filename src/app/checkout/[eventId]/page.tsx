@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import MainLayout from '../../../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FiCalendar, FiMapPin, FiClock, FiCreditCard, FiShield } from 'react-icons/fi';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 import { toast } from 'react-hot-toast';
@@ -371,11 +372,11 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
               
               <div className="text-xs text-gray-500">
                 By completing this purchase, you agree to our{' '}
-                <a href="/terms" className="text-blue-600 hover:underline">
+                <Link href="/terms" className="text-blue-600 hover:underline">Terms of Service</Link>
                   Terms of Service
                 </a>{' '}
                 and{' '}
-                <a href="/privacy" className="text-blue-600 hover:underline">
+                <Link href="/privacy" className="text-blue-600 hover:underline">Privacy Policy</Link>
                   Privacy Policy
                 </a>
               </div>
@@ -418,7 +419,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
               
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <h3 className="text-sm font-medium text-gray-500 mb-2">Need Help?</h3>
-                <a href="/contact" className="text-blue-600 hover:underline text-sm">
+                <Link href="/contact" className="text-blue-600 hover:underline text-sm">Contact Support</Link>
                   Contact Support
                 </a>
               </div>

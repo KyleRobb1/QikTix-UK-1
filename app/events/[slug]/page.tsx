@@ -1,3 +1,5 @@
+"use client";
+
 import Header from '@/components/Header';
 import PhotoUpload from '../../../src/components/PhotoUpload';
 import { useAuth } from '../../../src/context/AuthContext';

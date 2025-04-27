@@ -6,6 +6,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FiCalendar, FiCreditCard, FiSmartphone, FiSearch } from 'react-icons/fi';
 
+import Header from '@/components/Header';
+
 export default function Home() {
   return (
     <MainLayout>
@@ -198,21 +200,6 @@ export default function Home() {
                   fill
                   className="object-cover"
                 />
-              </div>
-              <div className="p-6">
-                <div className="text-sm text-blue-600 font-semibold mb-2">SAT, JUN 15 • 12:00 PM</div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900">Summer Music Festival 2025</h3>
-                <p className="text-gray-600 mb-4">Hyde Park, London</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-900 font-semibold">From £45.00</span>
-                  <Link
-                    href="/events/summer-music-festival"
-                    className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm"
-                  >
-                    Get Tickets
-                  </Link>
-                </div>
-              </div>
             </motion.div>
 
             {/* Event Card 2 */}

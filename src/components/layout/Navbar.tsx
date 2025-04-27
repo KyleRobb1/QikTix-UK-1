@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { useAuth } from '@/context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMenu, FiX, FiUser, FiLogOut, FiCalendar, FiTicket } from 'react-icons/fi';
+import { FiMenu, FiX, FiUser, FiLogOut, FiCalendar, FiTag } from 'react-icons/fi';
 import Image from 'next/image';
 
 export default function Navbar() {
@@ -74,7 +74,7 @@ export default function Navbar() {
                       <FiCalendar className="mr-2" /> My Events
                     </Link>
                     <Link href="/tickets" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 flex items-center">
-                      <FiTicket className="mr-2" /> My Tickets
+                      <FiTag className="mr-2" /> My Tickets
                     </Link>
                     <button 
                       onClick={handleSignOut} 
@@ -159,7 +159,7 @@ export default function Navbar() {
                     className="text-gray-700 hover:text-blue-600 transition-colors py-2 flex items-center"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <FiTicket className="mr-2" /> My Tickets
+                    <FiTag className="mr-2" /> My Tickets
                   </Link>
                   <button 
                     onClick={handleSignOut} 

@@ -2,15 +2,15 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import MainLayout from '@/components/layout/MainLayout';
+import MainLayout from '../../components/layout/MainLayout';
 import { motion } from 'framer-motion';
-import { useAuth } from '@/context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 import { toast } from 'react-hot-toast';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FiCalendar, FiMapPin, FiClock, FiTicket, FiUser, FiSettings, FiCreditCard, FiLogOut } from 'react-icons/fi';
+import { FiCalendar, FiMapPin, FiClock, FiTag, FiUser, FiSettings, FiCreditCard, FiLogOut } from 'react-icons/fi';
 import { Tab } from '@headlessui/react';
-import { supabase } from '@/lib/supabase';
+import { supabase } from '../../lib/supabase';
 
 export default function DashboardPage() {
   const { user, signOut } = useAuth();
@@ -195,7 +195,7 @@ export default function DashboardPage() {
                   <span>Dashboard</span>
                 </Link>
                 <Link href="/tickets" className="flex items-center space-x-2 p-3 text-gray-700 hover:bg-gray-50 rounded-md">
-                  <FiTicket />
+                  <FiTag />
                   <span>My Tickets</span>
                 </Link>
                 <Link href="/dashboard/events" className="flex items-center space-x-2 p-3 text-gray-700 hover:bg-gray-50 rounded-md">
@@ -274,7 +274,7 @@ export default function DashboardPage() {
                               <span>{ticket.venue}</span>
                             </div>
                             <div className="text-sm text-gray-600 flex items-center mt-1">
-                              <FiTicket className="mr-1" />
+                              <FiTag className="mr-1" />
                               <span>{ticket.ticketType}</span>
                             </div>
                           </div>

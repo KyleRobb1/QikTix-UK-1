@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FiCalendar, FiCreditCard, FiSmartphone, FiSearch } from 'react-icons/fi';
-
 import Header from '@/components/Header';
 
 export default function Home() {

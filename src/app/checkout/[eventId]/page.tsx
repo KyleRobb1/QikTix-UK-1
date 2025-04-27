@@ -416,8 +416,6 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <h3 className="text-sm font-medium text-gray-500 mb-2">Need Help?</h3>
                 <Link href="/contact" className="text-blue-600 hover:underline text-sm">Contact Support</Link>
-                  Contact Support
-                </a>
               </div>
             </motion.div>
           </div>

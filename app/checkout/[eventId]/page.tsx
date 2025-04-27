@@ -1,8 +1,4 @@
-interface PageProps {
-  params: { eventId: string };
-}
-
-export default function Page({ params }: PageProps) {
+export default function Page({ params }: { params: { eventId: string } }) {
   return (
     <div className="max-w-2xl mx-auto py-12 px-4">
       <h1 className="text-2xl font-bold mb-4">Checkout for Event {params.eventId}</h1>

@@ -162,13 +162,9 @@ export default function TicketSelection({ ticketTypes, eventId }: TicketSelectio
 
       <div className="mt-4 text-xs text-gray-500 text-center">
         By purchasing tickets, you agree to our{' '}
-        <Link href="/terms" className="text-blue-600 hover:underline">Terms of Service</Link>
-          Terms of Service
-        </a>{' '}
+        <Link href="/terms" className="text-blue-600 hover:underline">Terms of Service</Link>{' '}
         and{' '}
         <Link href="/privacy" className="text-blue-600 hover:underline">Privacy Policy</Link>
-          Privacy Policy
-        </a>
       </div>
     </div>
   );

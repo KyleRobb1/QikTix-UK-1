@@ -1,5 +1,5 @@
-import MainLayout from '@/components/layout/MainLayout';
-import SignupForm from '@/components/auth/SignupForm';
+import MainLayout from '../../components/layout/MainLayout';
+import SignupForm from '../../components/auth/SignupForm';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 

@@ -5,8 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FiCalendar, FiCreditCard, FiSmartphone, FiSearch } from 'react-icons/fi';
 
-"use client";
-
 import Header from '@/components/Header';
 
 export default function Home() {
@@ -411,6 +409,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </MainLayout>
+    </div>
   );
 }

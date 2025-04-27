@@ -2,6 +2,10 @@
 
 QikTix UK is a modern, full-stack event ticketing platform built with Next.js, React, Framer Motion, and Supabase. This platform provides a comprehensive solution for event organizers and attendees, with features like secure ticket purchasing, mobile e-tickets with QR codes, and real-time event management.
 
+## Deployment
+
+The application is deployed on Vercel and uses Supabase for backend services including authentication and database.
+
 ## Features
 
 - **User Authentication**: Email/password and social login via Supabase Auth

@@ -2,15 +2,15 @@
 
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
-import MainLayout from '@/components/layout/MainLayout';
+import MainLayout from '../../../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { FiCalendar, FiMapPin, FiClock, FiCreditCard, FiShield } from 'react-icons/fi';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 import { toast } from 'react-hot-toast';
-import { useAuth } from '@/context/AuthContext';
+import { useAuth } from '../../../context/AuthContext';
 import { useRouter } from 'next/navigation';
-import { supabase } from '@/lib/supabase';
+import { supabase } from '../../../lib/supabase';
 
 interface TicketType {
   id: string;
@@ -136,7 +136,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
     return getSubtotal() + getBookingFee();
   };
 
-  const handlePayPalApprove = async (data: any, actions: any) => {
+  const handlePayPalApprove = async (data: any, actions: any): Promise<void> => {
     try {
       // Capture the funds from the transaction
       const details = await actions.order.capture();
@@ -155,13 +155,11 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
         setOrderComplete(true);
         toast.success('Your tickets have been confirmed!');
       }, 2000);
-      
-      return true;
     } catch (error) {
       console.error('Payment error:', error);
       toast.error('Payment failed. Please try again.');
-      return false;
     }
+    // No return value (void)
   };
 
   const createPayPalOrder = (data: any, actions: any) => {
@@ -359,7 +357,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
                 <h3 className="font-semibold mb-3">Payment Method</h3>
                 <div className="bg-gray-50 p-4 rounded-md">
                   <PayPalScriptProvider options={{ 
-                    "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || "test", 
+                    clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || "test", 
                     currency: "GBP" 
                   }}>
                     <PayPalButtons

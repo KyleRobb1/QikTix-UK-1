@@ -1,7 +1,7 @@
 "use client";
 
 import Header from '@/components/Header';
-import PhotoUpload from '../../../src/components/PhotoUpload';
+import PhotoUpload from '@/components/PhotoUpload';
 import { useAuth } from '../../../src/context/AuthContext';
 import { useEffect, useState } from 'react';
 import { supabase } from '../../../src/lib/supabase';

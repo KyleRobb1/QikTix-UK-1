@@ -1,12 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { useAuth } from '@/context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { FiMail, FiLock, FiGithub, FiGoogle } from 'react-icons/fi';
+import { FiMail, FiLock, FiGithub } from 'react-icons/fi';
+import { FcGoogle } from 'react-icons/fc';
 import { toast } from 'react-hot-toast';
-import { supabase } from '@/lib/supabase';
+import { supabase } from '../../lib/supabase';
 
 export default function LoginForm() {
   const [email, setEmail] = useState('');
@@ -149,7 +150,7 @@ export default function LoginForm() {
             onClick={() => handleSocialLogin('google')}
             className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
           >
-            <FiGoogle className="h-5 w-5 text-red-500" />
+            <FcGoogle className="h-5 w-5" />
             <span className="ml-2">Google</span>
           </motion.button>
 

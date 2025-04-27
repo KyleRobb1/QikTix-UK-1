@@ -1,7 +1,8 @@
-import Header from '@/components/Header';
+'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 
 const demoEvents = [
   {
@@ -22,13 +23,15 @@ const demoEvents = [
 ];
 
 export default function EventsPage() {
+  const [search, setSearch] = useState('');
+  const filteredEvents = demoEvents.filter(event =>
+    event.title.toLowerCase().includes(search.toLowerCase())
+  );
   return (
-    <>
-      <Header />
-      <div className="max-w-4xl mx-auto py-12 px-4">
-        <h1 className="text-2xl font-bold mb-4">Events</h1>
+    <div>
+            <div className="max-w-4xl mx-auto py-12 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {demoEvents.map(event => (
+          {filteredEvents.map(event => (
             <div key={event.slug} className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
               <Image src={event.photo_url} alt={event.title} width={400} height={250} className="object-cover w-full h-48" />
               <div className="p-4 flex-1 flex flex-col justify-between">
@@ -39,7 +42,7 @@ export default function EventsPage() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,9 +1,9 @@
-import MainLayout from '@/components/layout/MainLayout';
+import MainLayout from '../../../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiCalendar, FiMapPin, FiClock, FiTag, FiShare2, FiHeart } from 'react-icons/fi';
-import TicketSelection from '@/components/events/TicketSelection';
+import TicketSelection from '../../../components/events/TicketSelection';
 
 // In a real app, this would fetch data from Supabase based on the slug
 export default function EventDetailPage({ params }: { params: { slug: string } }) {

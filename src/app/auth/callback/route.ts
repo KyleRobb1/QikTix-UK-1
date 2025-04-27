@@ -1,3 +1,4 @@
+// Updated auth callback route for Supabase authentication
 import { createClient } from '@supabase/supabase-js';
 import { NextRequest, NextResponse } from 'next/server';
 
